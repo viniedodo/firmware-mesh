@@ -675,7 +675,7 @@ void Screen::setup()
 
     // Initialize display and UI system
     ui->init();
-    dispdev->setFont((const uint8_t*)Open_Sans_Regular_12);
+    dispdev->((const uint8_t*)Open_Sans_Regular_12);
     displayWidth = dispdev->width();
     displayHeight = dispdev->height();
 
@@ -701,7 +701,7 @@ void Screen::setup()
     ui->setOverlays(overlays, sizeof(overlays) / sizeof(overlays[0]));
 
     // Enable UTF-8 to display mapping
-    dispdev->setFontTableLookupFunction(customFontTableLookup);
+    // dispdev->setFontTableLookupFunction(customFontTableLookup);
 
 #ifdef USERPREFS_OEM_TEXT
     logo_timeout *= 2; // Give more time for branded boot logos
