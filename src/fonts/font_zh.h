@@ -1,6 +1,6 @@
 // Created by https://oleddisplay.squix.ch/ Consider a donation
 // In case of problems make sure that you are using the font file with the correct version!
-const char font_zh[] PROGMEM = {
+const char Open_Sans_Regular_12[] PROGMEM = {
 	0x0B, // Width: 11
 	0x11, // Height: 17
 	0x20, // First Char: 32
