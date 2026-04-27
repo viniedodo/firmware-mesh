@@ -1623,4 +1623,38 @@ bool TFTDisplay::connect()
     return true;
 }
 
+
+
+void TFTDisplay::setFont(const uint8_t *fontData) {
+    if (tft) {
+        tft->setFont(&fonts::efontCN_16);
+        LOG_DEBUG("set cn font yes");
+    } else {
+        LOG_DEBUG("set cn font no");
+    }
+}
+
+uint16_t TFTDisplay::drawString(int16_t x, int16_t y, const String &text) {
+    if (tft) {
+        tft->drawString(text, x, y);
+    }
+    return text.length();
+}
+
+void TFTDisplay::drawStringf(int16_t x, int16_t y, char *buffer, String format, ...) {
+    // 可根据需要实现格式化字符串绘制
+}
+
+void TFTDisplay::drawXbm(int16_t x, int16_t y, int16_t width, int16_t height, const uint8_t *xbm) {
+    if (tft) {
+        tft->drawXBitmap(x, y, xbm, width, height, TFT_WHITE);
+    }
+}
+
+void TFTDisplay::drawCircle(int16_t x, int16_t y, int16_t radius) {
+    if (tft) {
+        tft->drawCircle(x, y, radius, TFT_WHITE);
+    }
+}
+
 #endif // USE_TFTDISPLAY
