@@ -675,7 +675,7 @@ void Screen::setup()
 
     // Initialize display and UI system
     ui->init();
-    dispdev->setFont(font_zh); 
+    dispdev->setFont(Open_Sans_Regular_12); 
     displayWidth = dispdev->width();
     displayHeight = dispdev->height();
 
