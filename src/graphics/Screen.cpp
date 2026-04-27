@@ -54,6 +54,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "gps/GeoCoord.h"
 #include "gps/RTC.h"
 #include "graphics/ScreenFonts.h"
+#include "fonts/font_zh.h"
 #include "graphics/SharedUIDisplay.h"
 #include "graphics/TFTPalette.h"
 #include "graphics/emotes.h"
@@ -674,6 +675,7 @@ void Screen::setup()
 
     // Initialize display and UI system
     ui->init();
+    dispdev->setFont(font_zh); 
     displayWidth = dispdev->width();
     displayHeight = dispdev->height();
 
